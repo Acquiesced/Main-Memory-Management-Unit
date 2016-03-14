@@ -16,6 +16,8 @@ public class PageEntryRequest {
 		this.offsetStr = virtualAddressStr.substring(4);
 		System.out.println("Processing Request...\nVirtual Address: " + virtualAddress);
 		System.out.println("Binary Virtual Address: " + virtualAddressStr);
+
+		//clean this....
 		if (checkPageTable(pageTable)) {
 			System.out.println("Page Hit: " + pageTable[Integer.parseInt(virtualPageNumStr, 2)].physicalAddressStr
 					+ offsetStr + " Decimal Physical Address: " + Integer.parseInt(
@@ -52,11 +54,6 @@ public class PageEntryRequest {
 			return true;
 		}
 	}
-
-	// Add Method to return physical mem slot or if physical mem is empty, set
-	// one for the request
-
-	// Add method to assign physical mem slot
 
 	private String formatBinary(int virtualAddress) {
 		int virtBinSize = Integer.toBinaryString(virtualAddress).length();

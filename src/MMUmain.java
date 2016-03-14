@@ -28,6 +28,7 @@ public class MMUmain {
 	}
 
 	public static void fillPageTable(PageEntry[] pageTable, MainMemTable mainMemory) {
+		//initial pagetable fill
 		new PageEntryRequest(12288, pageTable, mainMemory);
 		new PageEntryRequest(5151, pageTable, mainMemory);
 		new PageEntryRequest(1523, pageTable, mainMemory);
@@ -36,9 +37,18 @@ public class MMUmain {
 		new PageEntryRequest(36864, pageTable, mainMemory);
 		new PageEntryRequest(8989, pageTable, mainMemory);
 		new PageEntryRequest(45756, pageTable, mainMemory);
+
+		//margin split
+
+		System.out.println("******************");
+		System.out.println("******************");
+		System.out.println("******************");
+
+		//required page fill
 		new PageEntryRequest(20, pageTable, mainMemory);
 		new PageEntryRequest(4100, pageTable, mainMemory);
 		new PageEntryRequest(8300, pageTable, mainMemory);
+
 	}
 
 	public static void initPageTable() {
